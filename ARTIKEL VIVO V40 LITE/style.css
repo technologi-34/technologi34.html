@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    color: #000000;
+}
+header {
+    background-color: #1b1b1b;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow untuk header */
+}
+
+.header-list {
+    list-style-type: none;  /* Menghilangkan bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+}
+
+.header-list li {
+    margin: 0 20px; /* Spasi antara item list */
+    position: relative; /* Untuk positioning underline animasi */
+}
+
+.header-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s, transform 0.3s;
+    position: relative; /* Untuk underline animasi */
+}
+
+/* Animasi underline custom */
+.header-list li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: blue;
+    transition: width 0.3s ease-in-out;
+}
+
+.header-list li a:hover::after {
+    width: 100%;  /* Memperbesar underline saat hover */
+}
+
+/* Hover effect dengan animasi warna */
+.header-list li a:hover {
+    color: blue;
+    transform: scale(1.1); /* Efek zoom */
+}
+
+/* Shadow untuk setiap item saat dihover */
+.header-list li a:hover {
+    text-color: blue;
+}
+
+/* Style tambahan untuk responsif */
+@media (max-width: 768px) {
+    .header-list {
+        flex-direction: column;
+    }
+
+    .header-list li {
+        margin: 10px 0;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-toggle {
+    display: none;
+    background-color: #ffffff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+        .article-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .container {
+            width: 45%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            float: center;
+        }
+       
+        h1 {
+            color: #333;
+        }
+        img {
+            width: 60%;
+            height: auto;
+            margin-bottom: 20px;
+            
+        }
+        p {
+            margin: 10px 0;
+            text-align: justify;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }

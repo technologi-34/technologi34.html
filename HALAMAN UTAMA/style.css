@@ -1,0 +1,290 @@
+/* Resetting margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #ffffff;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+
+.header-list {
+    list-style-type: none;  /* Menghilangkan bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+}
+
+.header-list li {
+    margin: 0 20px; /* Spasi antara item list */
+    position: relative; /* Untuk positioning underline animasi */
+}
+
+.header-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s, transform 0.3s;
+    position: relative; /* Untuk underline animasi */
+}
+
+/* Animasi underline custom */
+.header-list li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: blue;
+    transition: width 0.3s ease-in-out;
+}
+
+.header-list li a:hover::after {
+    width: 100%;  /* Memperbesar underline saat hover */
+}
+
+/* Hover effect dengan animasi warna */
+.header-list li a:hover {
+    color: blue;
+    transform: scale(1.1); /* Efek zoom */
+}
+
+/* Shadow untuk setiap item saat dihover */
+.header-list li a:hover {
+    text-color: blue;
+}
+
+/* Style tambahan untuk responsif */
+@media (max-width: 768px) {
+    .header-list {
+        flex-direction: column;
+    }
+
+    .header-list li {
+        margin: 10px 0;
+    }
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+.burger {
+    display: none;
+}
+
+.hero {
+    height: 120vh;
+    background-image: url(file:///C:/Users/user/Downloads/DALL%C2%B7E%202024-10-06%2011.17.47%20-%20A%20futuristic%20city%20skyline%20filled%20with%20sleek%20skyscrapers%20and%20modern%20architecture.%20The%20streets%20below%20are%20filled%20with%20autonomous%20vehicles,%20smoothly%20drivi.webp);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    padding: 12px 25px;
+    background-color: #ff9800;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e68900;
+}
+/* About Section */
+.about-section {
+    padding: 60px 0;
+    background: white;
+    text-align: center;
+}
+
+.about-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #555;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Services Section */
+.services-section {
+    padding: 60px 0;
+    background: #fafafa;
+    color: #555;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: #555;
+}
+
+.grid-item {
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    color: #555;
+}
+
+.grid-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 0;
+    background: white;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.contact-section p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.contact-section .cta {
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    background: #333;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Navbar */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav-active .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .nav-active .burger div:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .nav-active .burger div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-active .burger div:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
